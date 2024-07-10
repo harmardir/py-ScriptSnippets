@@ -12,7 +12,7 @@ def resize_image(input_path, output_path, size):
     size (tuple): The desired size as a tuple (width, height).
     """
     with Image.open(input_path) as img:
-        img = img.resize(size, Image.ANTIALIAS)  # Resize the image with anti-aliasing
+        img = img.resize(size, Image.LANCZOS)  # Resize the image with LANCZOS filter
         img.save(output_path)  # Save the resized image
 
 # Example usage:
